@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa de amenazas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="barra">
+    <h1>Mapa de amenazas</h1>
+    <div class="contadores">
+      <span>Ataques <b id="contAtaques">0</b></span>
+      <span>Países origen <b id="contPaises">0</b></span>
+      <span>Hora <b id="reloj">--:--:--</b></span>
+    </div>
+    <nav class="filtros" id="filtros">
+      <button type="button" class="activo" data-tipo="todos">Todos</button>
+      <button type="button" data-tipo="ddos">DDoS</button>
+      <button type="button" data-tipo="malware">Malware</button>
+      <button type="button" data-tipo="intrusion">Intrusión</button>
+    </nav>
+  </header>
+  <main>
+    <svg id="mapa"></svg>
+    <aside id="feed">
+      <h2>Últimos ataques</h2>
+      <ul id="listaFeed"></ul>
+    </aside>
+    <p id="etiquetaModo" class="simulado">Datos simulados</p>
+  </main>
+  <script src="d3.min.js"></script>
+  <script src="topojson.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
